@@ -1,0 +1,79 @@
+extends layouts/login-layout.pug
+
+block content
+
+    style.
+            .loginContainer {
+                max-width: 50%; /* Ajustar el ancho máximo del contenedor */
+                margin: 0 auto; /* Centrar el contenedor */
+                overflow-x: auto; /* Agregar desplazamiento horizontal si es necesario */
+                position: relative;
+            }
+
+            .corner-image {
+                position: absolute;
+                width: 80px; 
+                height: 80px;
+                z-index: 999; 
+            }
+            .top-left {
+                top: 0;
+                left: 0;
+            }
+            .top-right {
+                top: 0;
+                right: 0;
+            }
+            .bottom-left {
+                bottom: 0;
+                left: 0;
+            }
+            .bottom-right {
+                bottom: 0;
+                right: 0;
+            }
+            
+    .loginContainer
+
+        img.corner-image.top-left(src="esq1.png", alt="Imagen esquina 1")
+        img.corner-image.top-right(src="esq2.png", alt="Imagen esquina 2")
+        img.corner-image.bottom-left(src="esq3.png", alt="Imagen esquina 3")
+        img.corner-image.bottom-right(src="esq4.png", alt="Imagen esquina 4")
+
+        img(src="DEATH.jpg" class="craneo" alt="")
+        
+        h1 DEATH NOTE
+        h3 COMO USARLA
+        
+        div.instructions
+            | I• La aplicacion debe permitir registrar el nombre completo de una persona (Nombres y Apellidos). La persona cuyo nombre sea registrado morira.
+            br
+            | II• La aplicacion debe permitir registrar la causa de muerte de una persona durante los 40 segundos siguientes al registro de su nombre. Si la causa de muerte no es registrada, esta persona morira de un ataque al corazon.
+            br
+            | III• Cuando la persona muera, debe poderse visualizar en la aplicacion.
+            br
+            | IV• Si la causa de la muerte es especificada, se tienen 6 minutos y 40 segundos adicionales para escribir los detalles especificos. En este caso, la persona morira 40 segundos despues de especificar los detalles.
+            br
+            | V• Al registrar a una persona en la aplicacion, debe cargarse una foto de su rostro. Si esta foto no es cargada, la persona no morira.
+            br
+            | VI• Todos los datos registrados deben quedar persistidos en una base de datos.
+            br
+            | VII• Todos los datos deben ser registrados y visualizados mediante una interfaz de usuario, la cual se conectara con un backend mediante una API REST.
+            br
+            | VIII• Debido a la importancia de este artefacto, y al potencial que tiene para la destruccion, el codigo de la aplicacion debe tener pruebas unitarias.
+            br
+            | IX• Ya que la aplicacion de Death Note debe poder ser usada desde cualquier lugar, el diseño de la interfaz de usuario debe ser responsive.
+            br
+            | X• Ryuk puede tener los ojos desviados, pero tiene buen ojo para los estilos. La aplicacion debe tener un diseño inmersivo y agradable.
+            br
+            | XI• Debido a que se desconoce en que infraestructura Ryuk va a desplegar su Death Note, la aplicacion debe ejecutarse en contenedores de Docker.
+            br
+            | XII• Posiblemente los siguientes usuarios de la Death Note sean personas extremadamente inteligentes y opinionadas como Light Yagami. Por esto, el codigo de la Death Note debe cumplir con buenos estandares.
+            br
+            | XIII• Debido a que los Shinigamis tienen un proceso de despliegue muy estructurado, la aplicacion debe contar con diagramas de infraestructura, arquitectura, componentes, entidad-relacion y clases. Si no son aplicables los diagramas de ER y Clases, se debe contar con un diagrama de secuencia.
+
+
+        br
+        a(href="/login") Volver a la Death Note.
+
+    

@@ -1,0 +1,27 @@
+mixin createPostForm(userLoggedIn)
+    .postFormContainer 
+        .userImageContainer 
+            img(src=userLoggedIn.profilePic, alt="Foto de Perfil")
+        .textareaContainer 
+            textarea#postTextarea(placeholder="¿Qué está pasando?")
+            .buttonContainer 
+                button#submitPostButton(disabled="") Post 
+
+mixin createReplyModal(userLoggedIn)
+    #replyModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='replyModalLabel' aria-hidden='true')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5#replyModalLabel.modal-title Comentarios
+                    button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') &times;
+                .modal-body
+                    #originalPostContainer
+                    .postFormContainer 
+                        .userImageContainer 
+                            img(src=userLoggedIn.profilePic, alt="Foto de Perfil")
+                        .textareaContainer 
+                            textarea#replyTextarea(placeholder="¿Qué está pasando?")
+                .modal-footer
+                    button.btn.btn-secondary(type='button' data-dismiss='modal') Cancelar
+                    button#submitReplyButton.btn.btn-primary(type='button', disabled="") Responder

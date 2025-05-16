@@ -1,0 +1,102 @@
+@font-face {
+    font-family: titulos;
+    src: url("/css/DEATH_FONT.ttf");
+}
+
+@font-face {
+    font-family: cuerpo;
+    src: url("/css/DEATHNOTEFont.ttf");
+}
+
+
+body{
+    background-color: black;
+    color: white;
+    font-family: titulos;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.loginContainer{
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border: 1px solid #dedede;
+    background-color: black;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    flex-shrink: 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    background-color: #f2f2f2;
+}
+
+input[type="submit"]{
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+.loginContainer a{
+    color: white;
+}
+
+h1{
+    font-family: cuerpo;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+
+
+h2{
+    font-family: cuerpo;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+h3{
+    font-family: cuerpo;
+    font-weight: 800;
+}
+
+.craneo{
+    width: 150px;
+    height: 150px;
+}
+
+input[type="file"]{
+    display: block;
+    margin: 0 auto;
+}
+
+.instructions {
+    font-family: cuerpo;
+    text-align: justify;
+    font-size: 25px;
+    padding: 10px;
+    line-height: 1.5;
+}
